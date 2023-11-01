@@ -35,11 +35,9 @@ class EditPlanetsPage extends StatelessWidget {
             child: Text(
                 'Произошла не предвиденная ошибка, мы уже работаем над ее решением'),
           ),
-          success: () {
-            const Center(
-              child: CircularProgressIndicator(),
-            );
-          },
+          success: () => const Center(
+            child: CircularProgressIndicator(),
+          ),
           loaded: (planets) => Center(
             child: ListView.builder(
               itemCount: planets.length,
